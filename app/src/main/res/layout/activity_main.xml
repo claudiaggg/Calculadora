@@ -12,7 +12,7 @@
             android:layout_height="wrap_content" android:id="@+id/Num7"
             app:layout_constraintEnd_toStartOf="@+id/Num8"
             app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="356dp"
-            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="73dp"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintHorizontal_bias="1.0"/>
     <Button
             android:text="6"
@@ -25,8 +25,9 @@
             android:text="0"
             android:layout_width="86dp"
             android:layout_height="44dp" android:id="@+id/Num0"
-            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="74dp"
-            app:layout_constraintTop_toBottomOf="@+id/Num1"/>
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Num1" android:layout_marginStart="74dp"
+            android:layout_marginBottom="35dp" app:layout_constraintBottom_toTopOf="@+id/Suma"/>
     <Button
             android:text="5"
             android:layout_width="wrap_content"
@@ -47,7 +48,7 @@
             android:layout_height="wrap_content" android:id="@+id/Num3"
             app:layout_constraintTop_toBottomOf="@+id/Num6"
             app:layout_constraintStart_toEndOf="@+id/Num2"
-    />
+            android:layout_marginEnd="73dp" app:layout_constraintEnd_toEndOf="parent"/>
     <Button
             android:text="8"
             android:layout_width="wrap_content"
@@ -60,10 +61,11 @@
             android:text="1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" android:id="@+id/Num1"
-            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="74dp"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/Num4"
             app:layout_constraintEnd_toStartOf="@+id/Num2"
-            app:layout_constraintBottom_toTopOf="@+id/Num0"/>
+            app:layout_constraintBottom_toTopOf="@+id/Num0" app:layout_constraintHorizontal_bias="0.0"
+            android:layout_marginStart="74dp"/>
     <Button
             android:text="4"
             android:layout_width="wrap_content"
@@ -78,41 +80,54 @@
             android:layout_height="wrap_content" android:id="@+id/Num9"
             app:layout_constraintStart_toEndOf="@+id/Num8"
             app:layout_constraintBottom_toTopOf="@+id/Num6" app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="356dp"/>
+            android:layout_marginTop="356dp" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"/>
     <Button
             android:text="/"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:id="@+id/Division" tools:layout_editor_absoluteY="634dp"
-            tools:layout_editor_absoluteX="221dp"/>
+            android:layout_height="wrap_content" android:id="@+id/Division"
+            android:layout_marginStart="7dp" app:layout_constraintStart_toEndOf="@+id/Multiplicacion"
+            tools:layout_editor_absoluteY="632dp"/>
     <Button
             android:text="-"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:id="@+id/Resta" tools:layout_editor_absoluteY="578dp"
-            tools:layout_editor_absoluteX="221dp"/>
+            android:layout_height="wrap_content" android:id="@+id/Resta"
+            android:layout_marginStart="7dp"
+            app:layout_constraintStart_toEndOf="@+id/Suma" android:layout_marginBottom="4dp"
+            app:layout_constraintBottom_toTopOf="@+id/Division"/>
     <Button
             android:text="+"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:id="@+id/Suma" tools:layout_editor_absoluteY="579dp"
-            tools:layout_editor_absoluteX="118dp"/>
+            android:layout_height="wrap_content" android:id="@+id/Suma"
+            app:layout_constraintEnd_toStartOf="@+id/Resta" android:layout_marginEnd="7dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="117dp"
+            android:layout_marginBottom="5dp" app:layout_constraintBottom_toTopOf="@+id/Multiplicacion"
+            app:layout_constraintHorizontal_bias="0.0"/>
     <Button
             android:text="x"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:id="@+id/Multiplicacion" tools:layout_editor_absoluteY="632dp"
-            tools:layout_editor_absoluteX="117dp"/>
+            android:layout_height="wrap_content" android:id="@+id/Multiplicacion"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="117dp"
+            android:layout_marginTop="5dp" app:layout_constraintTop_toBottomOf="@+id/Suma"
+            app:layout_constraintEnd_toStartOf="@+id/Division" android:layout_marginEnd="7dp"/>
     <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:inputType="number"
             android:ems="10"
-            android:id="@+id/Number" tools:layout_editor_absoluteY="223dp"
-            tools:layout_editor_absoluteX="100dp"/>
+            android:id="@+id/Number"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Text"
+            app:layout_constraintBottom_toTopOf="@+id/Num7"/>
     <EditText
             android:layout_width="355dp"
             android:layout_height="69dp"
             android:inputType="textPersonName"
             android:text="HOLA BIENVENIDOS A MI CALCULADORA"
             android:ems="10"
-            android:id="@+id/Text" tools:layout_editor_absoluteY="53dp"
-            tools:layout_editor_absoluteX="28dp"/>
+            android:id="@+id/Text" tools:layout_editor_absoluteY="119dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
